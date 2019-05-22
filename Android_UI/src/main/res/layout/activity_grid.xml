@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.w5_views.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T1"
+        android:id="@+id/Layouta"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T2"
+        android:id="@+id/Layoutb"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T3"
+        android:id="@+id/Layoutc"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T4"
+        android:id="@+id/Layoutd"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T5"
+        android:id="@+id/Layoute"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+</GridLayout>

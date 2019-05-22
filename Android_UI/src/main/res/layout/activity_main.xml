@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.w5_views.MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:text="Horizontal List"
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+    <Button
+        android:text="List View"
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+    <Button
+        android:text="Grid Layout"
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+    <Button
+        android:text="Relative Layout"
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+
+    <Button
+        android:text="Copy of Relative"
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="45sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorTextPrimaryLight" />
+</LinearLayout>

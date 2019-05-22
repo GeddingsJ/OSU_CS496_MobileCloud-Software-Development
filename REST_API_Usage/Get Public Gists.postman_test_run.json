@@ -1,0 +1,904 @@
+{
+	"id": "4558dc2f-c96d-45a4-8ed7-09691a8b1932",
+	"name": "Get Public Gists",
+	"allTests": [],
+	"timestamp": "2018-07-08T12:59:08.012Z",
+	"collection_id": "102f06a6-d2b2-4cfa-8ead-27aefe09547a",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "d491f5eb-cef3-4ddc-9299-8e2ee490c40d",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "102f06a6-d2b2-4cfa-8ead-27aefe09547a",
+		"name": "Get Public Gists",
+		"description": "REST API Usage - Problem 1",
+		"auth": null,
+		"events": [
+			{
+				"listen": "prerequest",
+				"script": {
+					"id": "c5a6b282-92c8-4d6d-a26f-5c0610716697",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			},
+			{
+				"listen": "test",
+				"script": {
+					"id": "3fa22e07-5d64-4b19-9866-6538a1280b86",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			}
+		],
+		"variables": [
+			{
+				"key": "GistCount",
+				"value": "0",
+				"description": "",
+				"type": "text",
+				"disabled": false
+			},
+			{
+				"key": "starsArr",
+				"value": "",
+				"description": "",
+				"type": "text",
+				"disabled": false
+			},
+			{
+				"key": "gistID",
+				"value": "",
+				"description": "",
+				"type": "text",
+				"disabled": false
+			}
+		],
+		"order": [
+			"9813c136-c3b7-4664-902a-7471b652705b",
+			"092874ad-3f0b-48f9-bd19-73d3b25374e3",
+			"eafe2c57-fa4a-41d6-8996-991c55544190",
+			"b5ff7399-40f7-4376-859f-13dc018e66a4",
+			"2e9e8672-ce2e-4c08-a7db-87815d57679a",
+			"08c5332c-cac1-4cb5-a1e8-11e136a73840",
+			"57ba0a5b-1adb-4249-af7b-63977b951dae",
+			"5dce1380-7e75-4cbd-92f8-2d5841111096",
+			"a8fae4e8-aa35-4659-a062-105cd7b8e4f8",
+			"abf45a13-90b5-41fb-ae9e-06150f4fd969",
+			"6db349f5-f094-4f10-be6b-ab0d6527ea0d",
+			"fc88b91a-23ce-48b0-bd48-b478245b1136"
+		],
+		"folders_order": [],
+		"owner": "4723196",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "gistID",
+			"value": "c7483c876832b5cde96eade6198fc3a6",
+			"enabled": true,
+			"type": "text"
+		}
+	],
+	"results": [
+		{
+			"name": "Get Public Gists",
+			"id": "9813c136-c3b7-4664-902a-7471b652705b",
+			"url": "https://api.github.com/gists",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Array length is: 30",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Array length is: 30": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"253"
+			],
+			"allTests": [
+				{
+					"Array length is: 30": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "253",
+			"totalRequestTime": "253",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get wolfordj's Gist",
+			"id": "092874ad-3f0b-48f9-bd19-73d3b25374e3",
+			"url": "https://api.github.com/users/wolfordj/gists",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "User wolfordj has at least 1 public gist",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"User wolfordj has at least 1 public gist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"125"
+			],
+			"allTests": [
+				{
+					"User wolfordj has at least 1 public gist": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "125",
+			"totalRequestTime": "125",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Pre-Creation",
+			"id": "eafe2c57-fa4a-41d6-8996-991c55544190",
+			"url": "https://api.github.com/gists",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Geddingj gist amount pre-creation: 23",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Geddingj gist amount pre-creation: 23": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"241"
+			],
+			"allTests": [
+				{
+					"Geddingj gist amount pre-creation: 23": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "241",
+			"totalRequestTime": "241",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Creation",
+			"id": "b5ff7399-40f7-4376-859f-13dc018e66a4",
+			"url": "https://api.github.com/gists",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"name": "Succesful creation of Gist",
+				"status": "pass",
+				"Status Code = 201": true
+			},
+			"testPassFailCounts": {
+				"Succesful creation of Gist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"1273"
+			],
+			"allTests": [
+				{
+					"Succesful creation of Gist": true,
+					"Status Code = 201": true
+				}
+			],
+			"time": "1273",
+			"totalRequestTime": "1273",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Post-Creation",
+			"id": "2e9e8672-ce2e-4c08-a7db-87815d57679a",
+			"url": "https://api.github.com/gists",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Geddingj gist amount post-creation: 24",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Geddingj gist amount post-creation: 24": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"230"
+			],
+			"allTests": [
+				{
+					"Geddingj gist amount post-creation: 24": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "230",
+			"totalRequestTime": "230",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Creation Check",
+			"id": "08c5332c-cac1-4cb5-a1e8-11e136a73840",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Geddingj gist succesfully uploaded with no changes",
+				"status": "pass",
+				"Original: 'String file contents' and current: String file contents": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Geddingj gist succesfully uploaded with no changes": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Original: 'String file contents' and current: String file contents": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"153"
+			],
+			"allTests": [
+				{
+					"Geddingj gist succesfully uploaded with no changes": true,
+					"Original: 'String file contents' and current: String file contents": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "153",
+			"totalRequestTime": "153",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Edit Existing Content",
+			"id": "57ba0a5b-1adb-4249-af7b-63977b951dae",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Succesful patch of Gist",
+				"status": "pass",
+				"Content of gist changed to 'new string' ": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Succesful patch of Gist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content of gist changed to 'new string' ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"833"
+			],
+			"allTests": [
+				{
+					"Succesful patch of Gist": true,
+					"Content of gist changed to 'new string' ": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "833",
+			"totalRequestTime": "833",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Star",
+			"id": "5dce1380-7e75-4cbd-92f8-2d5841111096",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd/star",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"name": "Gist starred with no error",
+				"status": "pass",
+				"Status Code = 204": true
+			},
+			"testPassFailCounts": {
+				"Gist starred with no error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"153"
+			],
+			"allTests": [
+				{
+					"Gist starred with no error": true,
+					"Status Code = 204": true
+				}
+			],
+			"time": "153",
+			"totalRequestTime": "153",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Confirm Star",
+			"id": "a8fae4e8-aa35-4659-a062-105cd7b8e4f8",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd/star",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"name": "Gist starred with no error",
+				"status": "pass",
+				"Status Code = 204": true
+			},
+			"testPassFailCounts": {
+				"Gist starred with no error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"112"
+			],
+			"allTests": [
+				{
+					"Gist starred with no error": true,
+					"Status Code = 204": true
+				}
+			],
+			"time": "112",
+			"totalRequestTime": "112",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist List Starred",
+			"id": "abf45a13-90b5-41fb-ae9e-06150f4fd969",
+			"url": "https://api.github.com/gists/starred",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Starred gists listed without error",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Starred gists listed without error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"124"
+			],
+			"allTests": [
+				{
+					"Starred gists listed without error": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "124",
+			"totalRequestTime": "124",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Unstar",
+			"id": "6db349f5-f094-4f10-be6b-ab0d6527ea0d",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd/star",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"name": "Starred gist unstarred without error",
+				"status": "pass",
+				"Status Code = 204": true
+			},
+			"testPassFailCounts": {
+				"Starred gist unstarred without error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"151"
+			],
+			"allTests": [
+				{
+					"Starred gist unstarred without error": true,
+					"Status Code = 204": true
+				}
+			],
+			"time": "151",
+			"totalRequestTime": "151",
+			"iterationResults": {}
+		},
+		{
+			"name": "Gist Deletion",
+			"id": "fc88b91a-23ce-48b0-bd48-b478245b1136",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"name": "Gist deleted without error",
+				"status": "pass",
+				"Status Code = 204": true
+			},
+			"testPassFailCounts": {
+				"Gist deleted without error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"132"
+			],
+			"allTests": [
+				{
+					"Gist deleted without error": true,
+					"Status Code = 204": true
+				}
+			],
+			"time": "132",
+			"totalRequestTime": "132",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 26,
+	"totalFail": 0,
+	"totalTime": 3780,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Get Public Gists",
+			"id": "9813c136-c3b7-4664-902a-7471b652705b",
+			"url": "https://api.github.com/gists",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Array length is: 30": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get wolfordj's Gist",
+			"id": "092874ad-3f0b-48f9-bd19-73d3b25374e3",
+			"url": "https://api.github.com/users/wolfordj/gists",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"User wolfordj has at least 1 public gist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Pre-Creation",
+			"id": "eafe2c57-fa4a-41d6-8996-991c55544190",
+			"url": "https://api.github.com/gists",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Geddingj gist amount pre-creation: 23": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Creation",
+			"id": "b5ff7399-40f7-4376-859f-13dc018e66a4",
+			"url": "https://api.github.com/gists",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"Succesful creation of Gist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Post-Creation",
+			"id": "2e9e8672-ce2e-4c08-a7db-87815d57679a",
+			"url": "https://api.github.com/gists",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Geddingj gist amount post-creation: 24": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Creation Check",
+			"id": "08c5332c-cac1-4cb5-a1e8-11e136a73840",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Geddingj gist succesfully uploaded with no changes": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Original: 'String file contents' and current: String file contents": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Edit Existing Content",
+			"id": "57ba0a5b-1adb-4249-af7b-63977b951dae",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Succesful patch of Gist": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content of gist changed to 'new string' ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Star",
+			"id": "5dce1380-7e75-4cbd-92f8-2d5841111096",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd/star",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"Gist starred with no error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Confirm Star",
+			"id": "a8fae4e8-aa35-4659-a062-105cd7b8e4f8",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd/star",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"Gist starred with no error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist List Starred",
+			"id": "abf45a13-90b5-41fb-ae9e-06150f4fd969",
+			"url": "https://api.github.com/gists/starred",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Starred gists listed without error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Unstar",
+			"id": "6db349f5-f094-4f10-be6b-ab0d6527ea0d",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd/star",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"Starred gist unstarred without error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Gist Deletion",
+			"id": "fc88b91a-23ce-48b0-bd48-b478245b1136",
+			"url": "https://api.github.com/gists/c8a7544bb4640811464aa24e294fcdcd",
+			"time": "2018-07-08T12:59:08.012Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"Gist deleted without error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

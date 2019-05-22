@@ -1,0 +1,1095 @@
+{
+	"info": {
+		"_postman_id": "d7a924a5-800d-466c-91ae-397c9bbca6b2",
+		"name": "Week3_REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a Boat",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "68a34ab2-b2d1-47de-b79c-423266641b05",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8df832ed-9fba-441f-81c5-34cbd16e2028",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var boat = jsonData.idVar;",
+							"var boatName = jsonData.name;",
+							"",
+							"pm.environment.set(\"firstBoat\", boat);",
+							"pm.environment.set(\"boatName\", boatName);",
+							"",
+							"boat = pm.environment.get(\"firstBoat\").toString().split(\"/\");",
+							"boat = boat[2];",
+							"",
+							"pm.environment.set(\"firstBoat\", boat);",
+							"",
+							"pm.test(\"Succesful creation of a boat.\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Boat at sea\"] = jsonData.at_sea === true;",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Boat{{$timestamp}}{{$randomInt}}\",\n\t\"boat_type\":\"A Big Boat Type\",\n\t\"length\":100\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat"
+					]
+				},
+				"description": "Create a boat that is \"at_sea\""
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "40b0a4ce-9826-4565-b9b6-8cdcd2f274da",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var slip = jsonData.idVar;",
+							"",
+							"pm.environment.set(\"firstSlip\", slip);",
+							"",
+							"slip = pm.environment.get(\"firstSlip\").toString().split(\"/\");",
+							"slip = slip[2];",
+							"",
+							"pm.environment.set(\"firstSlip\", slip);",
+							"",
+							"pm.test(\"Succesful creation of a Slip.\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Slip is empty\"] = jsonData.current_boat === \"\";",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip"
+					]
+				},
+				"description": "Create a slip that is not storing any ship."
+			},
+			"response": []
+		},
+		{
+			"name": "Modify a Boat VALID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "13cdcc72-5657-4391-a6f6-c825c662e808",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var bname = jsonData.name;",
+							"var blength = jsonData.length;",
+							"var btype = jsonData.boat_type;",
+							"var bsea = jsonData.at_sea;",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Modifications complete and match expected results.\", function(){",
+							"    pm.expect(blength).to.equal(496);",
+							"    pm.expect(btype).to.equal(\"A Valid Test Type of Boat\");",
+							"    pm.expect(bsea).to.equal(false);",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "49eb3e18-1975-44c2-9758-c55703ee81d4",
+						"type": "text/javascript",
+						"exec": [
+							"var new_name = \"thisnameisvalidBoat{{$timestamp}}{{$randomInt}}\"",
+							"",
+							"",
+							"",
+							"pm.environment.set(\"boatName\", new_name);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"{{boatName}}\",\n\t\"length\":496,\n\t\"boat_type\":\"A Valid Test Type of Boat\",\n\t\"at_sea\":false\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat/{{firstBoat}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat",
+						"{{firstBoat}}"
+					]
+				},
+				"description": "Modify the created vessel with valid requests."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Second Boat",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "68a34ab2-b2d1-47de-b79c-423266641b05",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "36e527dd-589e-4b82-afd0-d6794fa039e9",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var boat = jsonData.idVar;",
+							"var boatName = jsonData.name;",
+							"",
+							"pm.environment.set(\"boatID\", boat);",
+							"pm.environment.set(\"boatName\", boatName);",
+							"",
+							"boat = pm.environment.get(\"boatID\").toString().split(\"/\");",
+							"boat = boat[2];",
+							"",
+							"pm.environment.set(\"boatID\", boat);",
+							"",
+							"pm.test(\"Succesful creation of a boat.\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Boat at sea\"] = jsonData.at_sea === true;",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Boat{{$timestamp}}{{$randomInt}}\",\n\t\"boat_type\":\"A Big Boat Type\",\n\t\"length\":100\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat"
+					]
+				},
+				"description": "Create a second boat to show maximum slip allowance and invalid PATCHing of boat."
+			},
+			"response": []
+		},
+		{
+			"name": "Modify a Boat INVALID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3023071f-3630-4aad-ae12-5a177a4a5378",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status Code = 403\"] = responseCode.code === 403;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"thisnameisinvalid\",\n\t\"length\":999\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat/{{boatID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat",
+						"{{boatID}}"
+					]
+				},
+				"description": "Modify the created vessel with invalid requests resulting in a denied patch. \n"
+			},
+			"response": []
+		},
+		{
+			"name": "Boat to Slip 403",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a53b3ea-8c77-4a34-83f8-95231943bec2",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status Code = 403\"] = responseCode.code === 403;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"at_sea\":false\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat/{{boatID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat",
+						"{{boatID}}"
+					]
+				},
+				"description": "Test proving that 403 forbidden occurs when there is no room for the boat when 'at_sea' is set to false."
+			},
+			"response": []
+		},
+		{
+			"name": "Modify a Slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e094c649-b04d-40dc-b333-751fe14be6e3",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var adate = jsonData.arrival_date;",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Modifications complete and match expected results.\", function(){",
+							"    pm.expect(adate).to.equal(\"1/1/0000\");",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"arrival_date\":\"1/1/0000\"\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip/{{firstSlip}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip",
+						"{{firstSlip}}"
+					]
+				},
+				"description": "Show that slip can have values altered."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Second Slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "65450a2d-7f7b-413f-a2b5-5bc23a0e1ebf",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var slip = jsonData.idVar;",
+							"",
+							"pm.environment.set(\"slipID\", slip);",
+							"",
+							"slip = pm.environment.get(\"slipID\").toString().split(\"/\");",
+							"slip = slip[2];",
+							"",
+							"pm.environment.set(\"slipID\", slip);",
+							"",
+							"pm.test(\"Succesful creation of a Slip.\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Slip is empty\"] = jsonData.current_boat === \"\";",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip"
+					]
+				},
+				"description": "Create a new slip with an open slot for testing the ability to exclusively dock (no other modifications)."
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Boat to Slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f0cb9d7c-52d0-4313-9e0a-1b52fe205646",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.at_sea;",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat docked succesfully.\", function(){",
+							"    pm.expect(sea).to.equal(false);",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"at_sea\":false\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat/{{boatID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat",
+						"{{boatID}}"
+					]
+				},
+				"description": "Show that a boat can be set to false and result in automatic assignment of first available slip."
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Slip is Occupied",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4bdad5b-202c-46f6-97cc-43b29fdb1784",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.current_boat;",
+							"var boat = pm.environment.get(\"boatID\")",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat docked in slip: \" + jsonData.number, function(){",
+							"    pm.expect(sea).to.equal(\"/boat/\" + boat);",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip/{{slipID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip",
+						"{{slipID}}"
+					]
+				},
+				"description": "Confirm from slip perspective that boat was stored."
+			},
+			"response": []
+		},
+		{
+			"name": "Boat Releases Self into Sea",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "34dfb17b-7ebd-407e-8e3f-e471595e9af4",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.at_sea;",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat docked succesfully.\", function(){",
+							"    pm.expect(sea).to.equal(true);",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"at_sea\":true\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat/{{boatID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat",
+						"{{boatID}}"
+					]
+				},
+				"description": "Release docked boat back into the sea."
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Slip is Empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0818c3a-e658-4dca-9f76-dd823e17a7a0",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.current_boat;",
+							"var boat = pm.environment.get(\"boatID\")",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat docked in slip: \" + jsonData.number, function(){",
+							"    pm.expect(sea).to.equal(\"\");",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip/{{slipID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip",
+						"{{slipID}}"
+					]
+				},
+				"description": "Confirm from slip perspective that ship was released."
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Slip to Boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "62e9698f-9415-4a2b-892e-e2f248038792",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.current_boat;",
+							"var boat = pm.environment.get(\"boatID\")",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat docked in slip: \" + jsonData.number, function(){",
+							"    pm.expect(sea).to.equal(\"/boat/\" + boat);",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"current_boat\":\"{{boatID}}\"\n}"
+				},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip/{{slipID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip",
+						"{{slipID}}"
+					]
+				},
+				"description": "Alternative method of assigning a boat a slip. \n\nNot realistic, as it implies the slip reels the boat back in but functions to prove that the functionality was added for testing purposes."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Boat Information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "106401de-783f-445f-b4e4-7c65e8fc456c",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.idVar;",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat succesfully found.\", function(){",
+							"    pm.expect(sea).to.equal(\"/boat/\" + pm.environment.get(\"boatID\"));",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat/{{boatID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat",
+						"{{boatID}}"
+					]
+				},
+				"description": "Return all data regarding boat in it's current state."
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Boats Information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd08b133-8622-4f08-9f25-8af71660a818",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat"
+					]
+				},
+				"description": "Return information on all stored boats."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Slip Information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a1d0b6b4-93aa-4868-b412-0dbb4b12d157",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.idVar;",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat succesfully found.\", function(){",
+							"    pm.expect(sea).to.equal(\"/slip/\" + pm.environment.get(\"slipID\"));",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip/{{slipID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip",
+						"{{slipID}}"
+					]
+				},
+				"description": "Return information on a single slip."
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Slips Information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "59e87330-68cf-4503-8352-3f3e4a77d4f4",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip"
+					]
+				},
+				"description": "Return all slips."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Boat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7a5ffb3-2625-47e9-80f6-443978073d0a",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat/{{boatID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat",
+						"{{boatID}}"
+					]
+				},
+				"description": "Delete an existing vessel."
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Slip is Cleared",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "62813e80-3564-47d8-95b7-77da719a2ea4",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.current_boat;",
+							"var boat = pm.environment.get(\"boatID\")",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat docked in slip: \" + jsonData.number, function(){",
+							"    pm.expect(sea).to.equal(\"\");",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip/{{slipID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip",
+						"{{slipID}}"
+					]
+				},
+				"description": "Confirm that boat was removed from slip."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "72539bc4-75e0-44d6-a925-267d1c0e4129",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip/{{firstSlip}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip",
+						"{{firstSlip}}"
+					]
+				},
+				"description": "Delete slip and release boat to sea."
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Boat is Away",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7d3cbc62-6f37-409d-bd38-a18221a28f82",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var sea = jsonData.at_sea;",
+							"",
+							"pm.test(\"No Errors Detected\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"pm.test(\"Boat docked succesfully.\", function(){",
+							"    pm.expect(sea).to.equal(true);",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/boat/{{firstBoat}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"boat",
+						"{{firstBoat}}"
+					]
+				},
+				"description": "Confirm that boat docked with slip is now at sea."
+			},
+			"response": []
+		},
+		{
+			"name": "Cleanup Slips",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "209b9419-ca46-4d4d-86d0-5b021b21babc",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Slip cleared without error\", function() {",
+							"    pm.response.to.not.be.error;",
+							"});",
+							"",
+							"tests[\"Status Code = 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://loyal-coyote-210008.appspot.com/slip/{{slipID}}",
+					"protocol": "https",
+					"host": [
+						"loyal-coyote-210008",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"slip",
+						"{{slipID}}"
+					]
+				},
+				"description": "Remove spare slips created during testing."
+			},
+			"response": []
+		}
+	]
+}

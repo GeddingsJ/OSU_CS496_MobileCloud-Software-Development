@@ -1,0 +1,63 @@
+<HorizontalScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test1"
+            android:id="@+id/Layouta"
+            android:layout_margin="5dp"
+            android:textSize="45sp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextPrimaryLight" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test2"
+            android:id="@+id/Layoutb"
+            android:layout_margin="5dp"
+            android:textSize="45sp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextPrimaryLight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test3"
+            android:id="@+id/Layoutc"
+            android:layout_margin="5dp"
+            android:textSize="45sp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextPrimaryLight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test4"
+            android:id="@+id/Layoutd"
+            android:layout_margin="5dp"
+            android:textSize="45sp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextPrimaryLight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test5"
+            android:id="@+id/Layoute"
+            android:layout_margin="5dp"
+            android:textSize="45sp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextPrimaryLight" />
+
+    </LinearLayout>
+</HorizontalScrollView>

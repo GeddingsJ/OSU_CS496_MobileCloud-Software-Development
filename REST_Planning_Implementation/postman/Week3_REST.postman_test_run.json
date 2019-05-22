@@ -1,0 +1,1631 @@
+{
+	"id": "fd04d40b-f88d-49ce-a5ae-c50209ec0488",
+	"name": "Week3_REST",
+	"allTests": [],
+	"timestamp": "2018-07-15T18:25:56.285Z",
+	"collection_id": "d7a924a5-800d-466c-91ae-397c9bbca6b2",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "7aadb2cc-6729-4d29-95da-f5bbd5baa087",
+	"data": [],
+	"delay": 25,
+	"count": 1,
+	"collection": {
+		"id": "d7a924a5-800d-466c-91ae-397c9bbca6b2",
+		"name": "Week3_REST",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"variables": null,
+		"order": [
+			"d23e50fe-4fa0-4549-9a50-96892a3ef7de",
+			"b8a4ecc0-09af-4b24-af5a-c793574fc4d5",
+			"6c3e20d7-c91d-4ab5-a253-41ac6c3e2565",
+			"ed6f4fc0-65c9-4989-bd05-555e6fdc26ae",
+			"2de8eae9-3e23-4973-8ae9-436d240591a4",
+			"2cad7658-051e-4291-a8a2-4d47ea8f8996",
+			"9ff6938c-78ae-4085-ab85-07b1233ee6aa",
+			"4ce99c5d-eeb1-4a79-9bc8-79f07fa85804",
+			"ce653aac-ecba-4bd1-9dd6-c5e1eff32935",
+			"4fd96658-68b6-4e84-a98b-3af1cb7c34fd",
+			"8c85f95b-daf4-4d09-b70e-95347b3742e2",
+			"7e7f4035-40e0-4d27-9f66-7b6203c49571",
+			"699eef49-b32f-41bb-a05e-cc40cdb95e56",
+			"29dee9f5-0eeb-4500-a9ab-65ba1709da93",
+			"4bebdfce-67e9-463a-98f4-2e1d93636b94",
+			"4828e03f-f9e1-49a1-97b8-4e1f92085fdb",
+			"ffb00f83-6be7-44b1-adb1-6549d1bc96fb",
+			"7c351b46-bebc-4a60-8620-703619aa6fe9",
+			"eb4e3087-b7e9-4913-9cc1-64cfc8b6b0c4",
+			"b25249b2-edb9-4758-a3c8-0d510663da4c",
+			"589ed052-e434-4a4d-aa0d-a2aeb26fbd6f",
+			"5184a414-ec54-4c3d-bbb3-8ecc5eea39aa"
+		],
+		"folders_order": [],
+		"owner": "4723196",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "gistID",
+			"value": "c7483c876832b5cde96eade6198fc3a6",
+			"enabled": true,
+			"type": "text"
+		}
+	],
+	"results": [
+		{
+			"name": "Create a Boat",
+			"id": "d23e50fe-4fa0-4549-9a50-96892a3ef7de",
+			"url": "https://loyal-coyote-210008.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Succesful creation of a boat.",
+				"status": "pass",
+				"Boat at sea": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Succesful creation of a boat.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat at sea": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"490"
+			],
+			"allTests": [
+				{
+					"Succesful creation of a boat.": true,
+					"Boat at sea": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "490",
+			"totalRequestTime": "490",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create a Slip",
+			"id": "b8a4ecc0-09af-4b24-af5a-c793574fc4d5",
+			"url": "https://loyal-coyote-210008.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Succesful creation of a Slip.",
+				"status": "pass",
+				"Slip is empty": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Succesful creation of a Slip.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"339"
+			],
+			"allTests": [
+				{
+					"Succesful creation of a Slip.": true,
+					"Slip is empty": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "339",
+			"totalRequestTime": "339",
+			"iterationResults": {}
+		},
+		{
+			"name": "Modify a Boat VALID",
+			"id": "6c3e20d7-c91d-4ab5-a253-41ac6c3e2565",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNCMyAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Modifications complete and match expected results.": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Modifications complete and match expected results.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"402"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Modifications complete and match expected results.": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "402",
+			"totalRequestTime": "402",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create Second Boat",
+			"id": "ed6f4fc0-65c9-4989-bd05-555e6fdc26ae",
+			"url": "https://loyal-coyote-210008.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Succesful creation of a boat.",
+				"status": "pass",
+				"Boat at sea": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Succesful creation of a boat.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat at sea": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"346"
+			],
+			"allTests": [
+				{
+					"Succesful creation of a boat.": true,
+					"Boat at sea": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "346",
+			"totalRequestTime": "346",
+			"iterationResults": {}
+		},
+		{
+			"name": "Modify a Boat INVALID",
+			"id": "2de8eae9-3e23-4973-8ae9-436d240591a4",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {
+				"name": "Status Code = 403",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Status Code = 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"330"
+			],
+			"allTests": [
+				{
+					"Status Code = 403": true
+				}
+			],
+			"time": "330",
+			"totalRequestTime": "330",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat to Slip 403",
+			"id": "2cad7658-051e-4291-a8a2-4d47ea8f8996",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {
+				"name": "Status Code = 403",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"Status Code = 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"230"
+			],
+			"allTests": [
+				{
+					"Status Code = 403": true
+				}
+			],
+			"time": "230",
+			"totalRequestTime": "230",
+			"iterationResults": {}
+		},
+		{
+			"name": "Modify a Slip",
+			"id": "9ff6938c-78ae-4085-ab85-07b1233ee6aa",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJC21goM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Modifications complete and match expected results.": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Modifications complete and match expected results.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"265"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Modifications complete and match expected results.": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "265",
+			"totalRequestTime": "265",
+			"iterationResults": {}
+		},
+		{
+			"name": "Create Second Slip",
+			"id": "4ce99c5d-eeb1-4a79-9bc8-79f07fa85804",
+			"url": "https://loyal-coyote-210008.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Succesful creation of a Slip.",
+				"status": "pass",
+				"Slip is empty": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Succesful creation of a Slip.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"337"
+			],
+			"allTests": [
+				{
+					"Succesful creation of a Slip.": true,
+					"Slip is empty": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "337",
+			"totalRequestTime": "337",
+			"iterationResults": {}
+		},
+		{
+			"name": "Assign Boat to Slip",
+			"id": "ce653aac-ecba-4bd1-9dd6-c5e1eff32935",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat docked succesfully.": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked succesfully.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"347"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat docked succesfully.": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "347",
+			"totalRequestTime": "347",
+			"iterationResults": {}
+		},
+		{
+			"name": "Confirm Slip is Occupied",
+			"id": "4fd96658-68b6-4e84-a98b-3af1cb7c34fd",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat docked in slip: 1": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked in slip: 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"234"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat docked in slip: 1": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "234",
+			"totalRequestTime": "234",
+			"iterationResults": {}
+		},
+		{
+			"name": "Boat Releases Self into Sea",
+			"id": "8c85f95b-daf4-4d09-b70e-95347b3742e2",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat docked succesfully.": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked succesfully.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"345"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat docked succesfully.": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "345",
+			"totalRequestTime": "345",
+			"iterationResults": {}
+		},
+		{
+			"name": "Confirm Slip is Empty",
+			"id": "7e7f4035-40e0-4d27-9f66-7b6203c49571",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat docked in slip: 1": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked in slip: 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"244"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat docked in slip: 1": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "244",
+			"totalRequestTime": "244",
+			"iterationResults": {}
+		},
+		{
+			"name": "Assign Slip to Boat",
+			"id": "699eef49-b32f-41bb-a05e-cc40cdb95e56",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat docked in slip: 1": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked in slip: 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"352"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat docked in slip: 1": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "352",
+			"totalRequestTime": "352",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Boat Information",
+			"id": "29dee9f5-0eeb-4500-a9ab-65ba1709da93",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat succesfully found.": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat succesfully found.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"169"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat succesfully found.": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "169",
+			"totalRequestTime": "169",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Boats Information",
+			"id": "4bebdfce-67e9-463a-98f4-2e1d93636b94",
+			"url": "https://loyal-coyote-210008.appspot.com/boat",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"260"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "260",
+			"totalRequestTime": "260",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Slip Information",
+			"id": "4828e03f-f9e1-49a1-97b8-4e1f92085fdb",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat succesfully found.": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat succesfully found.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"310"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat succesfully found.": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "310",
+			"totalRequestTime": "310",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Slips Information",
+			"id": "ffb00f83-6be7-44b1-adb1-6549d1bc96fb",
+			"url": "https://loyal-coyote-210008.appspot.com/slip",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"219"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "219",
+			"totalRequestTime": "219",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete Boat",
+			"id": "7c351b46-bebc-4a60-8620-703619aa6fe9",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"175"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "175",
+			"totalRequestTime": "175",
+			"iterationResults": {}
+		},
+		{
+			"name": "Confirm Slip is Cleared",
+			"id": "eb4e3087-b7e9-4913-9cc1-64cfc8b6b0c4",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat docked in slip: 1": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked in slip: 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"248"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat docked in slip: 1": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "248",
+			"totalRequestTime": "248",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete Slip",
+			"id": "b25249b2-edb9-4758-a3c8-0d510663da4c",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJC21goM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"396"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "396",
+			"totalRequestTime": "396",
+			"iterationResults": {}
+		},
+		{
+			"name": "Confirm Boat is Away",
+			"id": "589ed052-e434-4a4d-aa0d-a2aeb26fbd6f",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNCMyAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "No Errors Detected",
+				"status": "pass",
+				"Boat docked succesfully.": true,
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked succesfully.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"223"
+			],
+			"allTests": [
+				{
+					"No Errors Detected": true,
+					"Boat docked succesfully.": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "223",
+			"totalRequestTime": "223",
+			"iterationResults": {}
+		},
+		{
+			"name": "Cleanup Slips",
+			"id": "5184a414-ec54-4c3d-bbb3-8ecc5eea39aa",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Slip cleared without error",
+				"status": "pass",
+				"Status Code = 200": true
+			},
+			"testPassFailCounts": {
+				"Slip cleared without error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"282"
+			],
+			"allTests": [
+				{
+					"Slip cleared without error": true,
+					"Status Code = 200": true
+				}
+			],
+			"time": "282",
+			"totalRequestTime": "282",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 57,
+	"totalFail": 0,
+	"totalTime": 6543,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Create a Boat",
+			"id": "d23e50fe-4fa0-4549-9a50-96892a3ef7de",
+			"url": "https://loyal-coyote-210008.appspot.com/boat",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Succesful creation of a boat.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat at sea": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create a Slip",
+			"id": "b8a4ecc0-09af-4b24-af5a-c793574fc4d5",
+			"url": "https://loyal-coyote-210008.appspot.com/slip",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Succesful creation of a Slip.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Modify a Boat VALID",
+			"id": "6c3e20d7-c91d-4ab5-a253-41ac6c3e2565",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNCMyAoM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Modifications complete and match expected results.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create Second Boat",
+			"id": "ed6f4fc0-65c9-4989-bd05-555e6fdc26ae",
+			"url": "https://loyal-coyote-210008.appspot.com/boat",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Succesful creation of a boat.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat at sea": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Modify a Boat INVALID",
+			"id": "2de8eae9-3e23-4973-8ae9-436d240591a4",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {
+				"Status Code = 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat to Slip 403",
+			"id": "2cad7658-051e-4291-a8a2-4d47ea8f8996",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {
+				"Status Code = 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Modify a Slip",
+			"id": "9ff6938c-78ae-4085-ab85-07b1233ee6aa",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJC21goM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Modifications complete and match expected results.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Create Second Slip",
+			"id": "4ce99c5d-eeb1-4a79-9bc8-79f07fa85804",
+			"url": "https://loyal-coyote-210008.appspot.com/slip",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Succesful creation of a Slip.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Slip is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Assign Boat to Slip",
+			"id": "ce653aac-ecba-4bd1-9dd6-c5e1eff32935",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked succesfully.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Confirm Slip is Occupied",
+			"id": "4fd96658-68b6-4e84-a98b-3af1cb7c34fd",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked in slip: 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Boat Releases Self into Sea",
+			"id": "8c85f95b-daf4-4d09-b70e-95347b3742e2",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked succesfully.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Confirm Slip is Empty",
+			"id": "7e7f4035-40e0-4d27-9f66-7b6203c49571",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked in slip: 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Assign Slip to Boat",
+			"id": "699eef49-b32f-41bb-a05e-cc40cdb95e56",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked in slip: 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Boat Information",
+			"id": "29dee9f5-0eeb-4500-a9ab-65ba1709da93",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat succesfully found.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Boats Information",
+			"id": "4bebdfce-67e9-463a-98f4-2e1d93636b94",
+			"url": "https://loyal-coyote-210008.appspot.com/boat",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Slip Information",
+			"id": "4828e03f-f9e1-49a1-97b8-4e1f92085fdb",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat succesfully found.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Slips Information",
+			"id": "ffb00f83-6be7-44b1-adb1-6549d1bc96fb",
+			"url": "https://loyal-coyote-210008.appspot.com/slip",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete Boat",
+			"id": "7c351b46-bebc-4a60-8620-703619aa6fe9",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNDq2QgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Confirm Slip is Cleared",
+			"id": "eb4e3087-b7e9-4913-9cc1-64cfc8b6b0c4",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked in slip: 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete Slip",
+			"id": "b25249b2-edb9-4758-a3c8-0d510663da4c",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJC21goM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Confirm Boat is Away",
+			"id": "589ed052-e434-4a4d-aa0d-a2aeb26fbd6f",
+			"url": "https://loyal-coyote-210008.appspot.com/boat/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBEJvYXQiC3BhcmVudF9ib2F0DAsSBEJvYXQYgICAgNCMyAoM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"No Errors Detected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boat docked succesfully.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Cleanup Slips",
+			"id": "5184a414-ec54-4c3d-bbb3-8ecc5eea39aa",
+			"url": "https://loyal-coyote-210008.appspot.com/slip/ahVtfmxveWFsLWNveW90ZS0yMTAwMDhyJgsSBFNsaXAiC3BhcmVudF9zbGlwDAsSBFNsaXAYgICAgJDJzwgM",
+			"time": "2018-07-15T18:25:56.285Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Slip cleared without error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code = 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
